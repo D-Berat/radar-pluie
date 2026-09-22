@@ -1,0 +1,5 @@
+src/** -text
+*.png binary
+*.jpg binary
+*.mov binary
+*.md text eol=lf
