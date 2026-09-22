@@ -22,6 +22,8 @@ Le projet s'appuie sur un radar pédagogique existant. Mon travail porte sur le 
 
 La photo du radar provient du site de présentation réalisé autour du même équipement. Ce site apporte du contexte sur le matériel ; il ne constitue pas une interface de pilotage du capteur.
 
+**Repère dans la vidéo :** le capteur ILS se trouve sous l'étiquette jaune, à l'intérieur du mécanisme blanc. Les deux aimants sont placés sous les extrémités de l'auget : à chaque basculement, l'un d'eux s'approche du capteur et déclenche la détection.
+
 ## ⚙️ Principe de fonctionnement
 
 1. L'eau s'accumule dans le mécanisme à auget.
