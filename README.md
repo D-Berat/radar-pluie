@@ -56,6 +56,14 @@ Dans le prototype intégré, ce mode adapte la vitesse limite du radar aux condi
 | **Wokwi** | Schéma du montage de simulation |
 | **diagrams.net** | Logigramme du fonctionnement |
 
+## 🔎 Choix du capteur
+
+J'ai comparé un bouton, un microrupteur et un **capteur ILS**, selon leur efficacité, leur faisabilité et leur durabilité. L'ILS obtient le meilleur total dans cette grille de choix : **7,5**, contre **6,5** pour le bouton et **6** pour le microrupteur.
+
+![Comparaison des composants pour le capteur à auget](docs/images/choix-capteur.png)
+
+La détection magnétique permet d'actionner le contact sans appui mécanique de l'auget sur le capteur. Le positionnement des aimants est donc essentiel. Les prix figurant dans ce tableau sont ceux relevés pendant le projet.
+
 ## 💻 Deux versions du programme
 
 | Version | Acquisition | Traitement |
@@ -69,6 +77,7 @@ La première version compte les **changements d'état** du contact : une fermetu
 
 ## 👤 Ma contribution
 
+- Comparaison des solutions de détection et **choix du capteur ILS**.
 - Programmation de l'acquisition du **capteur ILS** et du compteur associé au mécanisme à auget.
 - **Positionnement précis des deux aimants** sous les extrémités de l'auget pour obtenir le déclenchement de l'ILS lors du basculement.
 - Gestion du **mode pluie** et de sa temporisation réinitialisée à chaque détection.
@@ -86,6 +95,24 @@ Le schéma représente le montage de simulation. Les éléments dessinés ne son
 
 - [Logigramme du capteur à auget — fichier diagrams.net](docs/schemas/capteur-auget.drawio)
 - [Vidéo du test avec de l'eau](https://github.com/D-Berat/radar-pluie/raw/refs/heads/main/docs/videos/test-auget.mov)
+
+## 🧩 Logigramme
+
+<p align="center"><img src="docs/images/logigramme.png" alt="Logigramme du capteur à auget" width="428"></p>
+
+Ce logigramme présente la logique envisagée lors de la conception, avec une temporisation de **15 minutes**. Les deux programmes disponibles sont réglés sur **10 minutes**. Pour le comportement exécuté, se référer aux fichiers MicroPython : la désactivation intervient à l'expiration du délai après la dernière détection, même si cette condition n'est pas explicitée dans le dessin.
+
+## 📚 Documents techniques
+
+- [Présentation individuelle finale — PowerPoint avec vidéos](https://github.com/D-Berat/radar-pluie/releases/download/documentation/Projet.Revue.Finale.pptx)
+- [Guide du module ILS ST013 — GoTronic](docs/technique/guide-ils-st013.pdf)
+- [Logigramme modifiable — diagrams.net](docs/schemas/capteur-auget.drawio)
+
+Le guide GoTronic décrit un exemple de montage sur **Arduino Uno en 5 V**. Il sert de documentation du module ; son câblage ne doit pas être repris tel quel pour la carte MicroPython du projet. Les niveaux électriques et les broches doivent correspondre à la carte utilisée.
+
+## 📝 Retour d'expérience
+
+Les essais avec de l'eau ont permis de vérifier le fonctionnement de la détection. Ma présentation finale souligne aussi la **fragilité de l'ILS**, qui demande du soin lors de la manipulation et du montage, ainsi que l'importance de choisir le bon environnement : **Python sur ordinateur et MicroPython sur microcontrôleur n'offrent pas les mêmes modules matériels**.
 
 ## 🚀 Exécuter le programme
 
@@ -105,6 +132,7 @@ src/                 Programmes MicroPython
 docs/images/         Montage, radar et aperçu du test
 docs/videos/         Vidéo de démonstration
 docs/schemas/        Logigramme du capteur
+docs/technique/      Documentation du module ILS
 ```
 
 Projet réalisé en **STI2D, spécialité Systèmes d'information et numérique**, dans le cadre d'un prototype collectif de radar adaptatif aux conditions météorologiques.
