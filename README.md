@@ -14,11 +14,11 @@ Le projet s'appuie sur un radar pédagogique existant. Mon travail porte sur le 
 ## 🎬 Démonstration
 
 <p align="center">
-  <a href="docs/videos/test-auget.mov"><img src="docs/images/test-auget.jpg" alt="Essai du mécanisme à auget avec de l'eau" width="230"></a>
+  <a href="https://github.com/D-Berat/radar-pluie/raw/refs/heads/main/docs/videos/test-auget.mov"><img src="docs/images/test-auget.jpg" alt="Essai du mécanisme à auget avec de l'eau" width="230"></a>
   <img src="docs/images/radar.jpg" alt="Radar pédagogique utilisé comme support du projet" width="230">
 </p>
 
-**[Voir la vidéo de l'essai du capteur à auget](docs/videos/test-auget.mov)** — versement d'eau dans le mécanisme et observation des messages du programme. Si le lecteur GitHub ne s'affiche pas, télécharger la vidéo pour la lire localement.
+**[Télécharger la vidéo de l'essai du capteur à auget](https://github.com/D-Berat/radar-pluie/raw/refs/heads/main/docs/videos/test-auget.mov)** — versement d'eau dans le mécanisme et observation des messages du programme. Vidéo originale au format MOV, à lire avec un lecteur compatible.
 
 La photo du radar provient du site de présentation réalisé autour du même équipement. Ce site apporte du contexte sur le matériel ; il ne constitue pas une interface de pilotage du capteur.
 
@@ -83,7 +83,7 @@ Le projet a été mené en équipe, avec des contributions complémentaires en �
 Le schéma représente le montage de simulation. Les éléments dessinés ne sont pas tous pilotés par les deux programmes : ceux-ci utilisent uniquement l'entrée `Pin(2, Pin.IN)`.
 
 - [Logigramme du capteur à auget — fichier diagrams.net](docs/schemas/capteur-auget.drawio)
-- [Vidéo du test avec de l'eau](docs/videos/test-auget.mov)
+- [Vidéo du test avec de l'eau](https://github.com/D-Berat/radar-pluie/raw/refs/heads/main/docs/videos/test-auget.mov)
 
 ## 🚀 Exécuter le programme
 
